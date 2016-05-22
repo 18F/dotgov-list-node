@@ -1,0 +1,18 @@
+{
+  "name": "dotgov-list",
+  "version": "0.0.1",
+  "description": "Fetches lists of US .gov domains",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alan deLevie",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
