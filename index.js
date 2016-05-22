@@ -1,5 +1,3 @@
-var DomainFetcher = require('./lib/domain_fetcher');
+var DotgovListFetcher = require('./lib/dotgov_list_fetcher');
 
-module.exports = {
-  DomainFetcher: DomainFetcher
-};
+module.exports = DotgovListFetcher;

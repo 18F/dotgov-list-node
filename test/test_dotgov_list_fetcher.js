@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var nock = require('nock');
 var M = require('mstring');
 
-var DomainFetcher = require('.././lib/domain_fetcher');
+var DotgovListFetcher = require('.././lib/dotgov_list_fetcher');
 
 nock.disableNetConnect();
 
@@ -20,13 +20,13 @@ nock('https://raw.githubusercontent.com/GSA/data/gh-pages/dotgov-domains')
   .get('/2016-05-02-federal.csv')
   .reply(200, fakeCsv);
 
-describe('DomainFetcher', function() {
+describe('DotgovListFetcher', function() {
   describe('#perform()', function() {
     it('returns an array of objects', function(done) {
       var path = '2016-05-02-federal.csv'
-      var domainFetcher = new DomainFetcher(path);
+      var dotgovListFetcher = new DotgovListFetcher(path);
 
-      domainFetcher.perform(function(error, list) {
+      dotgovListFetcher.perform(function(error, list) {
         expect(list).to.be.a('array');
 
         list.forEach(function(listItem) {
@@ -36,6 +36,7 @@ describe('DomainFetcher', function() {
                                            'agency',
                                            'city',
                                            'state');
+
         });
 
         done();

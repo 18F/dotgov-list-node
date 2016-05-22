@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "repl": "node-repl index.js"
   },
   "author": "Alan deLevie",
   "license": "CC0-1.0",
@@ -20,5 +21,13 @@
   "dependencies": {
     "csv-parse": "^1.1.0",
     "request": "^2.72.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18F/dotgov-list-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/18F/dotgov-list-node/issues"
+  },
+  "homepage": "https://github.com/18F/dotgov-list-node#readme"
 }
